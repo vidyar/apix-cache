@@ -12,7 +12,7 @@ env:
   #- DB=sqlite
   #- DB=mysql
   #- DB=pgsql
-  #- DB=memcache
+   - DB=memcache
 
 before_script:
   #- sh -c "if [ '$DB' = 'apc' ]; then curl -o APC.tgz http://pecl.php.net/get/APC; tar -xzf APC.tgz; fi"
@@ -25,7 +25,7 @@ before_script:
   #- sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE IF NOT EXISTS apix_tests;'; fi"
   #- sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'DROP DATABASE IF EXISTS apix_tests;' -U postgres; fi"
   #- sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'CREATE DATABASE apix_tests;' -U postgres; fi"
-  #- sh -c "if [ '$DB' = 'memcache' ]; then sudo pecl install memcached-2.0.1; /usr/bin/memcached -d; fi"
+  - sh -c "if [ '$DB' = 'memcache' ]; then sudo pecl install memcached-2.0.1; /usr/bin/memcached -d; fi"
   - phpenv rehash
   - composer install --dev --prefer-source
 
