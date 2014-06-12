@@ -1,13 +1,13 @@
 language: php
 
 php:
-  - 5.3
+ # - 5.3
   - 5.4
-  - 5.5
-services:
-  - memcached
+  #- 5.5
+#services:
+ # - memcached
   #- mongodb
-  - redis
+  #- redis
 env:
   #- DB=apc
   
