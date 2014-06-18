@@ -10,9 +10,9 @@ php:
   #- mongodb
   #- redis
 env:
-  - DB=apc
-  #- DB=redis
-  #- DB=mongodb
+ # - DB=apc
+  - DB=redis
+  - DB=mongodb
   #- DB=sqlite
   #- DB=mysql
   #- DB=pgsql
