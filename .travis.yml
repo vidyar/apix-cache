@@ -10,13 +10,13 @@ php:
   #- mongodb
   #- redis
 env:
- # - DB=apc
+  - DB=apc
   - DB=redis
   - DB=mongodb
   #- DB=sqlite
   #- DB=mysql
   #- DB=pgsql
-  #- DB=memcache
+  - DB=memcache
 
 before_script:
   #- sh -c "if [ '$DB' = 'apc' ]; then curl -o APC.tgz http://pecl.php.net/get/APC; tar -xzf APC.tgz; fi"
