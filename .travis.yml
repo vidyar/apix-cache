@@ -2,9 +2,9 @@ language: php
 
 php:
   - 5.3
-  - 5.4
-  - 5.5
-  - 5.6
+  #- 5.4
+  #- 5.5
+  #- 5.6
 #services:
  # - memcached
   #- mongodb
@@ -20,7 +20,7 @@ env:
      - DB=memcache
      - secure: jF4hbAhKOtPwaDdJzzSonVgqHLGtoBOE8iQvetX29i3RR0ZLdVvERtfvF/U3HbP5TAMHE/G15nI2pzPxtNGyVcwBVR59XdXsF9SOrjqrdd4gzGIfnjJP+LSeiPul+1ksR94QHTwiUX4Bcfi7AJIyVupmt4O0is+DgpyUjDdWoQwl+HtLwnizgR8xA+GIi+chNYS9S8gUWRsRCFeH1M/7V5vDhYbjkBYORFmMBtSDKiHhovDzGB0PlDky5bcF/u0iKB8SEYQjLpjhP5d4wxwJiG5FZtFk8itk1JcGZSnAHmSPeJgkaCHWm30r8hAOdrHua+Jjvg4ouAuU062fmZ3qig==
      - secure: GC9+oN0eL46ufK1I55VERpQXTQCumjrvTOIaulp/IbUn6xSlJyVjdsbP8/brt7Awmp83dUgTzoQ3qKTuPrrifBcobU6TLH5pg07QnHBarzKrHDweuHMMR0m03cG1EnPJAmnnjooTGQyi+rf6/rFu2fMR1s4nqzulTLju1IH7mhSE/kbmP3DQp5pDgHWlbRi2gPoslg1v/nNfOzOgJP/lFqDowPdVR53HGtF9Gx3jTPRidFNUJLAa9DH0HzmOUqLQfgM3luvW0oY1+skZBC1x6j+52J5IWZAlWXp22vU56h3ilv7a/yLiy4JkvtHMbPkXmC4wTHEF8ot7BEueaJIE6g==
-
+     - secure: pxjrDpGlSvmIye4D0qEcEt1wqaGhRE3/oa9ASbvlhhWespihg7TBCy6+ZK2QFAL2nnYlXYnNzyWGCjtx/mQVmfOz6wp/Ec8r5KyBaml+YZN9lXGtbRCA0/l7fmOMoaODnqqtqFBYXApawRJNK8bNKabWNab+vxGs1A8l8wrMLk2hO28u1VbuoY9c0Djc+roVbF9AfRZLIf3COs5wu1WDG1xtwmUQWWnTYwBba1tO/vxI0/m96Hs0mLkz57jmtmdfIzy9Q9Ub2EGvw7TJ2MVt/yXghYMS7kP+yoond6Eh8Z6r98CpZYI6XCgru2C/xJZaivzmlx16EYD4itT6UpnLPQ==
 before_script:
   #- sh -c "if [ '$DB' = 'apc' ]; then curl -o APC.tgz http://pecl.php.net/get/APC; tar -xzf APC.tgz; fi"
   #- sh -c "if [ '$DB' = 'apc' ]; then cd APC-* && phpize && ./configure && make && sudo make install && cd ..; rm -fr APC*; fi"
