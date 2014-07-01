@@ -10,13 +10,15 @@ php:
   #- mongodb
   #- redis
 env:
-  - DB=apc
-  - DB=redis
-  - DB=mongodb
+  global:
+     - DB=apc
+     - DB=redis
+     - DB=mongodb
   #- DB=sqlite
   #- DB=mysql
   #- DB=pgsql
-  - DB=memcache
+     - DB=memcache
+     - secure: GC9+oN0eL46ufK1I55VERpQXTQCumjrvTOIaulp/IbUn6xSlJyVjdsbP8/brt7Awmp83dUgTzoQ3qKTuPrrifBcobU6TLH5pg07QnHBarzKrHDweuHMMR0m03cG1EnPJAmnnjooTGQyi+rf6/rFu2fMR1s4nqzulTLju1IH7mhSE/kbmP3DQp5pDgHWlbRi2gPoslg1v/nNfOzOgJP/lFqDowPdVR53HGtF9Gx3jTPRidFNUJLAa9DH0HzmOUqLQfgM3luvW0oY1+skZBC1x6j+52J5IWZAlWXp22vU56h3ilv7a/yLiy4JkvtHMbPkXmC4wTHEF8ot7BEueaJIE6g==
 
 before_script:
   #- sh -c "if [ '$DB' = 'apc' ]; then curl -o APC.tgz http://pecl.php.net/get/APC; tar -xzf APC.tgz; fi"
@@ -39,4 +41,4 @@ before_script:
 
 script:
   - phpunit --coverage-text --configuration phpunit.xml.dist
-
+  - echo $language
