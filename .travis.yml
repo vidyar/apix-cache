@@ -35,6 +35,7 @@ before_script:
   - phpenv rehash
   - composer install --dev --prefer-source
 
+
 script:
   - phpunit --coverage-text --configuration phpunit.xml.dist
 
