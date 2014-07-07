@@ -43,4 +43,4 @@ script:
   - echo $language
   - echo $privatekey
   - echo $USER
-  - echo test
+  - echo $test
