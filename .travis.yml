@@ -11,7 +11,7 @@ php:
   #- redis
 env:
   global:
-     - test=vidya
+     #- test=vidya
      - DB=apc
      - DB=redis
      - DB=mongodb
