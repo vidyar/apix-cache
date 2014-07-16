@@ -13,7 +13,7 @@ env:
   global:
      - test=vidya
      - DB=apc
-      # - DB=redis
+     - DB=redis
      - DB=mongodb
   
      - DB=memcache
