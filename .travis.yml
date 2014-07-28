@@ -38,4 +38,5 @@ before_script:
 
 script:
   - phpunit --coverage-text --configuration phpunit.xml.dist
+  - git rev-parse --abbrev-ref HEAD
 
