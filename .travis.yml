@@ -10,6 +10,7 @@ php:
   #- mongodb
   #- redis
 env:
+ global:
      - DB=apc
      - DB=redis
      - DB=mongodb
