@@ -79,7 +79,7 @@ class ApcTest extends GenericTestCase
         apc_add('foo', 'bar');
         $this->assertTrue($this->cache->flush(true)); // always true!
 
-        $this->assertEquals(false, apc_fetch('foo'));
+        $this->assertEquals(false, apc_fetch('fool'));
 
         $this->assertNull($this->cache->load('id3'));
         $this->assertNull($this->cache->load('tag1', 'tag'));
