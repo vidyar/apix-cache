@@ -34,6 +34,4 @@ script:
   - phpunit --coverage-text --configuration phpunit.xml.dist
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage --configuration phpunit.xml.dist
 notifications:
-    email:
-        - vidyac.raghav@gmail.com
-        - buildsampletest@gmail.com
+    email: false
