@@ -33,14 +33,8 @@ before_script:
 script:
   - phpunit --coverage-text --configuration phpunit.xml.dist
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage --configuration phpunit.xml.dist
-#parallelized_test: true
+parallelized_test: true
 
 archive: true
 
-notifications:
-     email:
-         recipients:
-             - vidya@shippable.com
-             - buildsampletest@gmail.com
-         on_success: always
-         on_failure: always
+
