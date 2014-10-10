@@ -37,4 +37,4 @@ parallelized_test: true
 
 archive: true
 
-
+cache: true
