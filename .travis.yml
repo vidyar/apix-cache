@@ -7,12 +7,10 @@ php:
   - 5.6
 
 env:
- global:
-     - DB=apc
-     - DB=redis
-     - DB=mongodb
-  
-     - DB=memcache
+  - DB=apc
+  - DB=redis
+  - DB=mongodb
+  - DB=memcache
 
 before_script:
   - sh -c "if [ '$DB' = 'apc' ]; then echo 'extension=apc.so' >> `php --ini | grep 'Loaded Configuration' | sed -e 's|.*:\s*||'`; fi"
