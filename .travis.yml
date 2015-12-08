@@ -4,7 +4,7 @@ language: php
 
 
 php:
- # - 5.3
+  - 5.3
   - 5.4
   - 5.5
   - 5.6
@@ -40,3 +40,15 @@ archive: true
 
 #cache: true
 #build_image: shippable/minv2
+notifications:
+  email:
+     recipients:
+        - vidya@shippable.com
+        - exampletwo@org.com
+     on_success: always
+     on_failure: always
+  irc:
+   pull_requests: true
+   channels:
+     - "chat.freenode.net#test-irc"
+     - "chat.freenode.net#testing2"
